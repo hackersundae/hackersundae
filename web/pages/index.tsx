@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -12,61 +12,51 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+      <main style={{ maxWidth: "40rem" }}>
+        <h1>hacker_sundae</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nibh
+          sit amet odio vehicula congue. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos. Aenean dignissim
+          lorem libero, in pharetra nisi luctus vel. Nulla interdum quam id
+          vestibulum fringilla. Vivamus metus massa, pharetra sagittis sodales
+          sed, tempor a sapien. Donec a velit non diam mollis faucibus. Sed vel
+          velit at ex dictum tincidunt. Nunc eu convallis tellus. Vivamus
+          interdum sollicitudin suscipit. Morbi mi elit, sagittis sit amet nisi
+          vitae, vestibulum gravida mi. Sed et arcu ac ipsum lacinia posuere
+          vitae quis ipsum. Nam vulputate sollicitudin finibus. Duis gravida dui
+          eget vestibulum gravida.
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+        <p>
+          Donec et massa diam. Nunc ac turpis lorem. Nam erat felis, interdum
+          nec ante eu, semper venenatis magna. In efficitur, metus finibus
+          fringilla tincidunt, est libero commodo massa, id tempus turpis risus
+          vitae diam. Vivamus quam dolor, iaculis id venenatis convallis,
+          sodales at lacus. Praesent ac leo et nisl accumsan ornare sed non
+          risus. Praesent id dignissim tortor. Maecenas mi turpis, ultricies ac
+          ultrices vel, consectetur euismod turpis. Nunc est ipsum, porta nec
+          nunc ut, gravida ornare diam.
+        </p>
+        <section className={styles.links}>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            Join the discord
           </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        </section>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <span style={{ display: "flex", gap: "8px" }}>
+          <p>made with</p>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            &hearts;
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            &hearts;
+          </a>
+        </span>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -13,12 +13,17 @@
 }
 
 .footer {
+  position: fixed;
+  font-size: .8rem;
+  background-color: plum;
+  bottom: 0;
+  left: 0;
   display: flex;
+  padding: 0 2rem;
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  width: 100%;
 }
 
 .footer a {
@@ -28,8 +33,8 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
+.links a {
+  color: #0070f3 !important;
   text-decoration: none;
 }
 
