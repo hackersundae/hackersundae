@@ -2,7 +2,6 @@ import Head from "next/head";
 import { styled } from "../stitches.config";
 
 const Box = styled("div", {
-  backgroundColor: "$hiContrast",
 });
 
 const Text = styled("p", {
@@ -38,12 +37,15 @@ export default function Home() {
   return (
     <Box css={{ paddingY: "$6" }}>
       <Head>
-        <title>hackersundae</title>
+        <title>Hacker Sundae</title>
         <meta name="description" content="Hackathon group" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container size={{ "@initial": "1", "@bp1": "2" }}>
-        <Text as="h1" css={{ color: "$purple500" }}>hackersundae</Text>
+        <Text as="h1" css={{ color: "$hierContrast" }}>
+          Hacker Sundae
+        </Text>
+        <hr />
         <Text>
           Founded in 2016, we are a collective of hackers who host a weekly
           hack-a-thon on Sundays. We band together to explore our ideas and hack
