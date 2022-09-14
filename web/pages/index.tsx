@@ -1,12 +1,18 @@
 import Head from "next/head";
 import { styled } from "../stitches.config";
 
-const Box = styled("div", {
-});
+const Box = styled("div", {});
 
 const Text = styled("p", {
   fontFamily: "$system",
   color: "$gray600",
+});
+
+const NavLink = styled("a", {
+  textDecoration: "none",
+  fontFamily: "$system",
+  fontSize: "$2",
+  color: "$loContrast"
 });
 
 const Link = styled("a", {
@@ -35,17 +41,70 @@ const Container = styled("div", {
 
 export default function Home() {
   return (
-    <Box css={{ paddingY: "$6" }}>
+    <Box css={{ paddingY: "$1" }}>
       <Head>
         <title>Hacker Sundae</title>
         <meta name="description" content="Hackathon group" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container size={{ "@initial": "1", "@bp1": "2" }}>
-        <Text as="h1" css={{ color: "$hierContrast" }}>
-          Hacker Sundae
-        </Text>
-        <hr />
+        <nav
+          style={{
+            display: "flex",
+            backgroundColor: "#5E5184",
+            padding: ".25rem .25rem",
+            color: "white",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ display: "flex", gap: "1.2rem", alignItems: "center" }}>
+            <div
+              style={{ display: "flex", alignItems: "center", gap: ".3rem" }}
+            >
+              <img
+                src="/logo.png"
+                style={{ height: "20px", border: "solid 1px white" }}
+              />
+              <NavLink
+                css={{ fontWeight: "700", fontSize: "$3" }}
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hacker Sundae
+              </NavLink>
+            </div>
+            <NavLink
+              href="/about"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              about
+            </NavLink>
+            <NavLink
+              href="/blog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              blog
+            </NavLink>
+            <NavLink
+              href="https://github.com/hackersundae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </NavLink>
+          </div>
+          <NavLink
+            href="https://discord.gg/NCYacgkyZF"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join the Discord
+          </NavLink>
+        </nav>
         <Text>
           Founded in 2016, we are a collective of hackers who host a weekly
           hack-a-thon on Sundays. We band together to explore our ideas and hack
@@ -59,15 +118,6 @@ export default function Home() {
           of your peers. We want to set aside Sundays for you to try things out
           and genuinely do cool shit. Not do more work for your corporate
           overlords.
-        </Text>
-        <Text>
-          <Link
-            href="https://discord.gg/NCYacgkyZF"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join the discord
-          </Link>
         </Text>
       </Container>
     </Box>
