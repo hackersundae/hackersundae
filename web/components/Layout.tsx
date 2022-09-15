@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { styled } from "../stitches.config";
 
-import Nav from "../components/Nav";
+interface LayoutProps {
+  children: JSX.Element;
+  description: string;
+}
 
 const Box = styled("div", {});
 
@@ -24,20 +27,15 @@ const Container = styled("div", {
   },
 });
 
-export default function Layout({ children, description }) {
-  return (
-    <>
-      <Box css={{ paddingY: "$1" }}>
-        <Head>
-          <title>Hacker Sundae</title>
-          <meta name="description" content={description} />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Container size={{ "@initial": "1", "@bp1": "2" }}>
-          <Nav />
-          {children}
-        </Container>
-      </Box>
-    </>
-  );
-}
+const Layout: React.FC<LayoutProps> = ({ children, description }) => (
+  <Box css={{ paddingY: "$1" }}>
+    <Head>
+      <title>Hacker Sundae</title>
+      <meta name="description" content={description} />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <Container size={{ "@initial": "3", "@bp1": "1" }}>{children}</Container>
+  </Box>
+);
+
+export default Layout;
