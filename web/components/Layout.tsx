@@ -1,10 +1,9 @@
+// next
 import Head from "next/head";
+// stitches
 import { styled } from "../stitches.config";
-
-interface LayoutProps {
-  children: JSX.Element;
-  description: string;
-}
+// types
+import { LayoutProps } from "../types";
 
 const Box = styled("div", {});
 

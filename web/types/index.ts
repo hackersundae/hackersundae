@@ -14,6 +14,7 @@ export interface BodyProps {
 }
 
 export interface BigLinkProps {
+  url: string;
   linkTitle: string;
   subtitle?: string;
 }

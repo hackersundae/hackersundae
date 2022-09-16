@@ -1,12 +1,10 @@
-interface BigLinkProps {
-    linkTitle: string;
-    subtitle?: string;
-  }
+// types
+import { BigLinkProps } from "../types";
   
-  const BigLink: React.FC<BigLinkProps> = ({ linkTitle, subtitle }) => {
+  const BigLink: React.FC<BigLinkProps> = ({ url, linkTitle, subtitle }) => {
     return (
       <>
-        <a>{linkTitle}</a>
+        <a href={url} target="_blank" rel="noopener noreferrer">{linkTitle}</a>
         {subtitle && <p>{subtitle}</p>}
       </>
     );

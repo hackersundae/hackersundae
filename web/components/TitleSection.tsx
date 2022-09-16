@@ -1,7 +1,5 @@
-interface TitleProps {
-  title: string;
-  subtitle?: string;
-}
+// types
+import { TitleProps } from "../types";
 
 const Title: React.FC<TitleProps> = ({ title, subtitle }) => {
   return (

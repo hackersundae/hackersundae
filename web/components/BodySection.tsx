@@ -1,7 +1,5 @@
-interface BodyProps {
-  title: string;
-  children: JSX.Element;
-}
+// types
+import { BodyProps } from "../types";
 
 const Body: React.FC<BodyProps> = ({ title, children }) => {
   return (
