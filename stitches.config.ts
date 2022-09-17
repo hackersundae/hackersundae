@@ -61,6 +61,7 @@ export const {
     },
     fonts: {
       system: "system-ui",
+      hacker: "IBM Plex Mono, monospace;"
     },
   },
   utils: {

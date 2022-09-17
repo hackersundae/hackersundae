@@ -1,11 +1,14 @@
 // stitches
 import { styled } from "../stitches.config";
-// types
-import { BodyProps } from "../types";
+
+interface BodyProps {
+  title: string;
+  children: JSX.Element;
+}
 
 const Heading = styled("h1", {
-  fontSize: "$7",
-  fontWeight: "400"
+  fontSize: "$6",
+  fontWeight: "black",
 });
 
 const BodyWrapper = styled("div", {
@@ -18,7 +21,7 @@ const BodyWrapper = styled("div", {
   },
   "& p": {
     margin: "0 0 $2 0",
-  }
+  },
 });
 
 const Body: React.FC<BodyProps> = ({ title, children }) => {

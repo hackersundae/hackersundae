@@ -12,27 +12,36 @@ import BigLink from "../components/BigLink";
 // utils
 import data from "../utils/data/default.json";
 // types
-import { HomeProps, TitleProps, BodyProps, BigLinkProps } from "../types";
+import { HomeProps, TitleProps, BigLinkProps } from "../types";
 
 const globalStyles = globalCss({
-  body: { backgroundColor: "$gray100" },
+  body: {
+    backgroundColor: "$gray100",
+    minHeight: "100vh",
+    padding: "0",
+    margin: "0",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
 
-const Home: React.FC<HomeProps> = ({ titleProps, bodyProps, linkProps }) => {
+const Page: React.FC<HomeProps> = ({ titleProps, bodyProps, linkProps }) => {
   useEffect(() => {
     globalStyles();
   }, []);
 
   const children = (
-    <div dangerouslySetInnerHTML={{ __html: bodyProps.children }}></div>
+    <div dangerouslySetInnerHTML={{ __html: bodyProps.children }} />
   );
 
-  bodyProps = { ...bodyProps, children };
+  const newbodyProps = { ...bodyProps, children };
+
   return (
     <Layout description="Hackathon Group">
       <>
         <Title {...titleProps} />
-        <Body {...bodyProps} />
+        <Body {...newbodyProps} />
         <BigLink {...linkProps} />
       </>
     </Layout>
@@ -42,6 +51,11 @@ const Home: React.FC<HomeProps> = ({ titleProps, bodyProps, linkProps }) => {
 type Slug = {
   slug: string[];
 };
+
+interface BodyProps {
+  title: string;
+  children: string;
+}
 
 interface PageData {
   titleProps: TitleProps;
@@ -55,7 +69,7 @@ export const getStaticProps: GetStaticProps<PageData, Slug> = (
   let pageData;
   const slug = context.params?.slug?.join("/") || "default";
   if (Object.keys(data).indexOf(slug) >= 0) {
-    pageData = data[slug];
+    pageData = data[slug as keyof typeof data];
     return {
       props: { ...pageData },
     };
@@ -73,4 +87,4 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export default Home;
+export default Page;

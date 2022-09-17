@@ -8,9 +8,9 @@ import { LayoutProps } from "../types";
 const Box = styled("div", {});
 
 const Container = styled("div", {
-  marginX: "auto",
-  paddingX: "$3",
-  fontFamily: "$system",
+  height: "100%",
+  paddingX: "$5",
+  fontFamily: "$hacker",
   fontSize: "$2",
   color: "$hiContrast",
   variants: {
