@@ -6,11 +6,12 @@ export interface LayoutProps {
 export interface TitleProps {
   title: string;
   subtitle?: string;
+  split?: number;
 }
 
 export interface BodyProps {
   title: string;
-  children: JSX.Element;
+  children: JSX.Element | string;
 }
 
 export interface BigLinkProps {

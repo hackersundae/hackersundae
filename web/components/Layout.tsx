@@ -10,7 +10,9 @@ const Box = styled("div", {});
 const Container = styled("div", {
   marginX: "auto",
   paddingX: "$3",
-
+  fontFamily: "$system",
+  fontSize: "$2",
+  color: "$hiContrast",
   variants: {
     size: {
       1: {
