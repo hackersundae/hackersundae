@@ -34,6 +34,9 @@ const Layout: React.FC<LayoutProps> = ({ children, description }) => (
       <title>Hacker Sundae</title>
       <meta name="description" content={description} />
       <link rel="icon" href="/favicon.ico" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={description} />
+      <meta name="twitter:description" content={description} />
     </Head>
     <Container size={{ "@initial": "3", "@bp1": "1" }}>{children}</Container>
   </Box>

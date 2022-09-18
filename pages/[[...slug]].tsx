@@ -2,9 +2,8 @@
 import { useEffect } from "react";
 // next
 import { GetStaticProps, GetStaticPaths, GetStaticPropsResult } from "next";
-import Image from "next/image";
 // stitches
-import { globalCss, styled } from "../stitches.config";
+import { globalCss } from "../stitches.config";
 // components
 import Layout from "../components/Layout";
 import Title from "../components/TitleSection";
@@ -39,7 +38,7 @@ const Page: React.FC<HomeProps> = ({ titleProps, bodyProps, linkProps }) => {
   const newbodyProps = { ...bodyProps, children };
 
   return (
-      <Layout description="Hackathon Group">
+      <Layout description="A collective of hackers who host a weeklyhack-a-thon on Sundays">
         <>
           <Title {...titleProps} />
           <Body {...newbodyProps} />
@@ -68,8 +67,8 @@ export const getStaticProps: GetStaticProps<PageData, Slug> = (
   context
 ): GetStaticPropsResult<PageData> => {
   let pageData;
-  // slice to handle gh pages
-  const slug = context.params?.slug?.slice(1).join("/") || "default";
+  
+  const slug = context.params?.slug?.join("/") || "default";
   if (Object.keys(data).indexOf(slug) >= 0) {
     pageData = data[slug as keyof typeof data];
     return {
