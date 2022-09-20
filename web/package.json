@@ -1,5 +1,7 @@
 {
-  "private": true,
+  "name": "@hackersundae/web",
+  "version": "1.0.0",
+  "description": "Hacker Sundae website",
   "scripts": {
     "build": "next build",
     "dev": "next dev",

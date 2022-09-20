@@ -1,0 +1,18 @@
+{
+  "name": "hackersundae",
+  "version": "1.0.0",
+  "description": "Hacker Sundae monorepo",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "web",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:start": "yarn --cwd web start",
+    "web:build": "yarn --cwd web build",
+    "web:dev": "yarn --cwd web dev"
+  },
+  "repository": "git@github.com:hackersundae/hackersundae.git",
+  "license": "MIT"
+}
