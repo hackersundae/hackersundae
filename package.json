@@ -12,7 +12,7 @@
     "web:start": "yarn --cwd web start",
     "web:build": "yarn --cwd web build",
     "web:dev": "yarn --cwd web dev",
-    "web:export": "yarn --cwd web export && mv web/_static ."
+    "web:export": "yarn --cwd web export && mv web/static_web_output . && rm -rf web/static_web_output"
   },
   "repository": "git@github.com:hackersundae/hackersundae.git",
   "license": "MIT"

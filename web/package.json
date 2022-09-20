@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "export": "yarn run build && next export -o _static"
+    "export": "yarn run build && next export -o static_web_output"
   },
   "dependencies": {
     "@stitches/react": "1.2.8",
