@@ -3,7 +3,7 @@ import { useEffect } from "react";
 // next
 import { GetStaticProps, GetStaticPaths, GetStaticPropsResult } from "next";
 // stitches
-import { globalCss } from "../stitches.config";
+import { globalCss, styled } from "../stitches.config";
 // components
 import Layout from "../components/Layout";
 import Title from "../components/TitleSection";
@@ -17,12 +17,8 @@ import { HomeProps, TitleProps, BigLinkProps } from "../types";
 const globalStyles = globalCss({
   body: {
     backgroundColor: "$gray100",
-    minHeight: "100vh",
-    padding: "0",
-    margin: "0",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    fontFamily: "$hacker",
+    margin: "0"
   },
 });
 
@@ -38,13 +34,13 @@ const Page: React.FC<HomeProps> = ({ titleProps, bodyProps, linkProps }) => {
   const newbodyProps = { ...bodyProps, children };
 
   return (
-      <Layout description="A collective of hackers who host a weeklyhack-a-thon on Sundays">
-        <>
-          <Title {...titleProps} />
-          <Body {...newbodyProps} />
-          <BigLink {...linkProps} />
-        </>
-      </Layout>
+    <Layout description="A collective of hackers who host a weekly hack-a-thon on Sundays">
+      <>
+        <Title {...titleProps} />
+        <Body {...newbodyProps} />
+        <BigLink {...linkProps} />
+      </>
+    </Layout>
   );
 };
 
@@ -67,7 +63,7 @@ export const getStaticProps: GetStaticProps<PageData, Slug> = (
   context
 ): GetStaticPropsResult<PageData> => {
   let pageData;
-  
+
   const slug = context.params?.slug?.join("/") || "default";
   if (Object.keys(data).indexOf(slug) >= 0) {
     pageData = data[slug as keyof typeof data];
