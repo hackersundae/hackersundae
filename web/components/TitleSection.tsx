@@ -20,7 +20,6 @@ const Heading = styled("h1", {
 const SubTitle = styled("p", {
   fontSize: "$3",
   fontWeight: "300",
-  color: "$gray600",
 });
 
 const splitTitleHelper = (title: string, split: number): JSX.Element => {

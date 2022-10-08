@@ -5,15 +5,25 @@ import { styled } from "../stitches.config";
 // types
 import { LayoutProps } from "../types";
 
-const Box = styled("div", {
-});
+const Box = styled("div", {});
 
 const Container = styled("div", {
-  paddingX: "$5",
+  padding: "100px",
   fontSize: "$2",
-  color: "$hiContrast",
-  margin: "0 auto",
+  color: "$loContrast",
+  transition: "300ms",
   variants: {
+    padding: {
+      1: {
+        padding: "100px",
+      },
+      2: {
+        padding: "50px",
+      },
+      3: {
+        padding: "20px",
+      }
+    },
     size: {
       1: {
         maxWidth: "440px",
@@ -25,7 +35,6 @@ const Container = styled("div", {
   },
 });
 
-
 const Layout: React.FC<LayoutProps> = ({ children, description }) => (
   <Box>
     <Head>
@@ -36,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children, description }) => (
       <meta name="twitter:title" content={description} />
       <meta name="twitter:description" content={description} />
     </Head>
-      <Container size={{ "@initial": "2" }}>{children}</Container>
+    <Container size={{ "@initial": "2" }} padding={{"@initial": "1", "@md": "2", "@sm": "3"}}>{children}</Container>
   </Box>
 );
 
