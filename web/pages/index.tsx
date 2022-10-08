@@ -42,13 +42,11 @@ const FooterWrapper = styled("div", {
 const CosmeticFooterWrapper = styled("div", {
   position: "relative",
   bottom: "0",
-  width: "100vw",
-  padding: "0",
 });
 
 const CosmeticFooter = styled("svg", {
   position: "absolute",
-  width: "115vw",
+  width: "190vw",
   left: "0",
   bottom: "0",
 });
