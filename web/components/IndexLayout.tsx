@@ -15,7 +15,7 @@ const Container = styled("div", {
   variants: {
     padding: {
       1: {
-        padding: "100px",
+        padding: "80px 100px 100px 100px",
       },
       2: {
         padding: "50px",

@@ -28,18 +28,30 @@ const globalStyles = globalCss({
       "conic-gradient(from -51.43deg at 22.33% 110.5%, #2300F9 -101.77deg, #09042C 129.5deg, #19072A 146.25deg, #2300F9 258.23deg, #09042C 489.5deg)",
     fontFamily: "$hacker",
     margin: "0",
-    minHeight: "100vh",
+    height: "100vh",
+    overflow: "hidden",
   },
 });
 
-const CosmeticFooter = styled("div", {
+const FooterWrapper = styled("div", {
   position: "absolute",
-  width: "100vw",
-  height: "100px",
-  background: "#9D3DE9",
-  opacity: ".40",
   bottom: "0",
-})
+  zIndex: "-1"
+});
+
+const CosmeticFooterWrapper = styled("div", {
+  position: "relative",
+  bottom: "0",
+  width: "100vw",
+  padding: "0",
+});
+
+const CosmeticFooter = styled("svg", {
+  position: "absolute",
+  width: "115vw",
+  left: "0",
+  bottom: "0",
+});
 
 // const ImgLayout = styled("div", {
 //   position: "absolute",
@@ -49,13 +61,31 @@ const CosmeticFooter = styled("div", {
 //   width: "250px"
 // })
 
+const DripFooter = () => (
+  <FooterWrapper>
+    <CosmeticFooterWrapper>
+      <CosmeticFooter
+        viewBox="0 0 1349 154"
+        fill="cover"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 31L212.277 53.9012C231.286 55.952 250.506 54.7429 269.108 50.3259L303.819 42.084C334.33 34.8395 366.259 36.2791 395.994 46.2399L476.561 73.2289C524.312 89.2248 576.72 82.9565 619.351 56.1504L674.654 21.3769C720.557 -7.4866 779.079 -6.92038 824.416 22.826V22.826C857.541 44.5608 898.387 51.0747 936.63 40.7216L1013.17 20.0017C1042.19 12.1448 1072.79 12.2207 1101.77 20.2218L1194.2 45.7375C1220.98 53.1303 1249.18 53.7665 1276.26 47.5889L1349 31V154H0V31Z"
+          fill="#9D3DE9"
+          fillOpacity="0.36"
+        />
+      </CosmeticFooter>
+    </CosmeticFooterWrapper>
+  </FooterWrapper>
+);
+
 const Page: React.FC<HomeProps> = () => {
   useEffect(() => {
     globalStyles();
   }, []);
 
   return (
-      <>
+    <>
       <Layout description="A collective of hackers who host a weekly hack-a-thon on Sundays">
         <>
           <Title
@@ -89,8 +119,8 @@ const Page: React.FC<HomeProps> = () => {
           />
         </>
       </Layout>
-      <CosmeticFooter />
-      </>
+      <DripFooter />
+    </>
   );
 };
 
