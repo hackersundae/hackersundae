@@ -5,14 +5,13 @@
   "main": "index.js",
   "private": true,
   "workspaces": [
-    "web",
+    "next-web",
     "packages/*"
   ],
   "scripts": {
-    "web:start": "yarn --cwd web start",
-    "web:build": "yarn --cwd web build",
-    "web:dev": "yarn --cwd web dev",
-    "web:export": "yarn --cwd web export && mv web/static_web_output . && rm -rf web/static_web_output"
+    "web:start": "yarn --cwd next-web start",
+    "web:build": "yarn --cwd next-web build",
+    "web:dev": "yarn --cwd next-web dev"
   },
   "repository": "git@github.com:hackersundae/hackersundae.git",
   "license": "MIT"
