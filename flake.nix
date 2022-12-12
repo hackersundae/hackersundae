@@ -22,8 +22,11 @@
           ];
 
           shellHook = ''
-            PS1="[\[\033[32m\]\w]\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
-            echo "Hacker Sundae Shell"
+            PS1='[\[\033[32m\]\w]\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]'
+            echo 'Hacker Sundae Shell'
+            alias gb='git branch'
+            alias gco='git checkout'
+            alias gs='git status'
           '';
         };
 
