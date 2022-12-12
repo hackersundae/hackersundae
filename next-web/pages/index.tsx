@@ -55,8 +55,8 @@ const Page: React.FC<HomeProps> = () => {
           <div>
             <p>
               Founded in 2016, we are a collective of hackers who host a
-              weeklyhack-a-thon on Sundays. We band together to explore our
-              ideas and hackthem into existence. We are developers, artists,
+              weekly hack-a-thon on Sundays. We band together to explore our
+              ideas and hack them into existence. We are developers, artists,
               students, and friends. Hacker Sunday is supposed to be a
               sustainable hack-a-thon experience,unlike your typical 24hr
               hack-a-thon.
@@ -64,9 +64,9 @@ const Page: React.FC<HomeProps> = () => {
             <p>
               There's no specific topic except you can't hack on 'work'
               projects. Hacker Sunday is a place where you can explore freely
-              with the supportof your peers. We want to set aside Sundays for
-              you to try things outand genuinely do cool shit. Not do more work
-              for your corporateoverlords.
+              with the support of your peers. We want to set aside Sundays for
+              you to try things out and genuinely do cool shit. Not do more work
+              for your corporate overlords.
             </p>
           </div>
         </Body>
