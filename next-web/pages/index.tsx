@@ -1,15 +1,12 @@
-// react
 import { useEffect } from "react";
-// next
 import Image from "next/image";
-// stitches
 import { globalCss, styled } from "../stitches.config";
-// components
+
 import Layout from "../layouts/IndexLayout";
 import Title from "../components/TitleSection";
 import Body from "../components/BodySection";
 import BigLink from "../components/BigLink";
-// types
+
 import { HomeProps } from "../types";
 
 const globalStyles = globalCss({
@@ -17,13 +14,13 @@ const globalStyles = globalCss({
     fontFamily: "$hacker",
     margin: "0",
     background:
-    "conic-gradient(from -51.43deg at 22.33% 110.5%, #2300F9 -101.77deg, #09042C 129.5deg, #19072A 146.25deg, #2300F9 258.23deg, #09042C 489.5deg)",
-    minHeight: "100vh"
+      "conic-gradient(from -51.43deg at 22.33% 110.5%, #2300F9 -101.77deg, #09042C 129.5deg, #19072A 146.25deg, #2300F9 258.23deg, #09042C 489.5deg)",
+    minHeight: "100vh",
   },
 });
 
 const Wrapper = styled("div", {
-  padding: "3rem 1rem"
+  padding: "3rem 1rem",
 });
 
 const LogoWrapper = styled("div", {
@@ -31,7 +28,7 @@ const LogoWrapper = styled("div", {
   height: "100px",
   width: "50px",
   margin: "0 0 $1 0",
-  zIndex: "-1"
+  zIndex: "-1",
 });
 
 const Logo = styled(Image, {
@@ -47,7 +44,7 @@ const Page: React.FC<HomeProps> = () => {
     <Layout description="A collective of hackers who host a weekly hack-a-thon on Sundays">
       <Wrapper>
         <LogoWrapper>
-          <Image layout='fill' src="/logo.png" alt="Hacker Sundae logo" />
+          <Image layout="fill" src="/logo.png" alt="Hacker Sundae logo" />
         </LogoWrapper>
         <Title
           title="Welcome to, Hacker Sundae"
