@@ -27,6 +27,8 @@
             alias gb='git branch'
             alias gco='git checkout'
             alias gs='git status'
+            alias pull='git pull'
+            alias push='git push'
           '';
         };
 
