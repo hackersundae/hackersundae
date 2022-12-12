@@ -23,8 +23,7 @@ const globalStyles = globalCss({
 });
 
 const Wrapper = styled("div", {
-  padding: "3rem 1rem",
-  overflowY: "scroll"
+  padding: "3rem 1rem"
 });
 
 const LogoWrapper = styled("div", {
@@ -48,7 +47,7 @@ const Page: React.FC<HomeProps> = () => {
     <Layout description="A collective of hackers who host a weekly hack-a-thon on Sundays">
       <Wrapper>
         <LogoWrapper>
-          <Logo fill src="/logo.png" alt="Hacker Sundae logo" />
+          <Image layout='fill' src="/logo.png" alt="Hacker Sundae logo" />
         </LogoWrapper>
         <Title
           title="Welcome to, Hacker Sundae"
