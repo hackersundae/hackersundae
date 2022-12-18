@@ -14,5 +14,9 @@
     "web:dev": "yarn --cwd next-web dev"
   },
   "repository": "git@github.com:hackersundae/hackersundae.git",
-  "license": "MIT"
+  "license": "MIT",
+  "volta": {
+    "node": "18.12.1",
+    "yarn": "1.22.19"
+  }
 }
