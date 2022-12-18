@@ -5,13 +5,12 @@
   "main": "index.js",
   "private": true,
   "workspaces": [
-    "next-web",
-    "packages/*"
+    "next-web"
   ],
   "scripts": {
-    "web:start": "yarn --cwd next-web start",
-    "web:build": "yarn --cwd next-web build",
-    "web:dev": "yarn --cwd next-web dev"
+    "web:start": "yarn workspace @hackersundae/next-web run start",
+    "web:build": "yarn workspace @hackersundae/next-web run build",
+    "web:dev": "yarn workspace @hackersundae/next-web run dev"
   },
   "repository": "git@github.com:hackersundae/hackersundae.git",
   "license": "MIT",
