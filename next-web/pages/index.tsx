@@ -71,7 +71,7 @@ const Page: React.FC<HomeProps> = () => {
           </div>
         </Body>
         <BigLink
-          url="https://discord.gg/NCYacgkyZF"
+          url="https://discord.gg/hp36nWgcG4"
           linkTitle="Become A Hacker And Join Us"
           subtitle="Join our Discord Server and add the Hacker Sunday Role"
         />
