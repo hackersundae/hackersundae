@@ -1,7 +1,7 @@
 export interface LayoutProps {
-    children: JSX.Element;
-    description: string;
-  }
+  children: JSX.Element;
+  description: string;
+}
 
 export interface TitleProps {
   title: string;
