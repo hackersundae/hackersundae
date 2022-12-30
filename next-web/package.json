@@ -1,6 +1,7 @@
 {
   "name": "@hackersundae/next-web",
   "description": "Hacker Sundae next.js website",
+  "license": "MIT",
   "version": "1.0.0",
   "scripts": {
     "build": "next build",
