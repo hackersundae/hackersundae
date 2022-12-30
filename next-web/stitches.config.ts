@@ -57,11 +57,11 @@ export const {
       5: "19px",
       6: "21px",
       7: "32px",
-      10: "48px"
+      10: "48px",
     },
     fonts: {
       system: "system-ui",
-      hacker: "IBM Plex Mono, monospace;"
+      hacker: "IBM Plex Mono, monospace;",
     },
   },
   utils: {
@@ -83,9 +83,9 @@ export const {
     }),
   },
   media: {
-    sm: '(max-width: 640px)',
-    md: '(max-width: 768px)',
-    lg: '(max-width: 1024px)',
-    xl: '(min-width: 1025px)'
+    sm: "(max-width: 640px)",
+    md: "(max-width: 768px)",
+    lg: "(max-width: 1024px)",
+    xl: "(min-width: 1025px)",
   },
 });
