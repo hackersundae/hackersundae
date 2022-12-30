@@ -1,8 +1,5 @@
-// next
 import Head from "next/head";
-// stitches
 import { styled } from "../stitches.config";
-// types
 import { LayoutProps } from "../types";
 
 const Box = styled("div", {});
