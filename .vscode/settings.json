@@ -1,5 +1,4 @@
 {
-    "cSpell.words": [
-        "hackersundae"
-    ]
+  "cSpell.words": ["hackersundae"],
+  "recommendations": ["esbenp.prettier-vscode"]
 }
