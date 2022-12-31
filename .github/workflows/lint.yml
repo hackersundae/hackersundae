@@ -7,9 +7,6 @@ permissions:
 jobs:
   prettier:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: next-web
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -18,8 +15,7 @@ jobs:
           cache: "yarn"
           cache-dependency-path: "yarn.lock"
       - name: Install dependencies
-        run: |
-          pwd
-          yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
       - name: Run prettier
+        working-directory: next-web
         run: yarn run prettier --check .
