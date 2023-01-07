@@ -25,14 +25,10 @@ const Wrapper = styled("div", {
 
 const LogoWrapper = styled("div", {
   position: "relative",
-  height: "100px",
-  width: "50px",
+  height: "70px",
+  width: "35px",
   margin: "0 0 $1 0",
   zIndex: "-1",
-});
-
-const Logo = styled(Image, {
-  objectFit: "contain",
 });
 
 const Page: React.FC<HomeProps> = () => {

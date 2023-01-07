@@ -13,7 +13,7 @@ const Section = styled("section", {
 });
 
 const Heading = styled("h1", {
-  fontSize: "$10",
+  fontSize: "$7",
   lineHeight: "1",
 });
 

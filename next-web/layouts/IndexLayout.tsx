@@ -30,6 +30,8 @@ const Layout: React.FC<LayoutProps> = ({ children, description }) => (
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={description} />
       <meta name="twitter:description" content={description} />
+      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#2300F9" />
+      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#09042C" />
     </Head>
     <Container size={{ "@initial": "2" }}>{children}</Container>
   </Box>

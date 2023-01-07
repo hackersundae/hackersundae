@@ -7,7 +7,7 @@ interface BodyProps {
 }
 
 const Heading = styled("h1", {
-  fontSize: "$7",
+  fontSize: "$6",
   fontWeight: "black",
 });
 
@@ -16,6 +16,7 @@ const BodyWrapper = styled("div", {
   flexDirection: "column",
   margin: "$4 0 $6 0",
   gap: "$1",
+  fontSize: "$3",
   "& *": {
     margin: "0",
   },
