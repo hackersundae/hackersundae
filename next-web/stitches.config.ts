@@ -57,7 +57,7 @@ export const {
       5: "19px",
       6: "21px",
       7: "32px",
-      10: "48px",
+      8: "36px",
     },
     fonts: {
       system: "system-ui",

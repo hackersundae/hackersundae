@@ -11,7 +11,7 @@ const glowing = keyframes({
 });
 
 const Link = styled("a", {
-  fontSize: "$5",
+  fontSize: "$4",
   color: "$loContrast",
   textDecoration: "none",
   border: "none",
@@ -50,7 +50,7 @@ const Link = styled("a", {
 });
 
 const SubText = styled("p", {
-  fontSize: "$3",
+  fontSize: "$2",
   fontWeight: "300",
   margin: "$4 0 0 0",
 });
