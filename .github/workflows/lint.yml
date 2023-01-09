@@ -15,7 +15,7 @@ jobs:
           cache: "yarn"
           cache-dependency-path: "yarn.lock"
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Run prettier
         working-directory: next-web
         run: yarn run prettier --check .
