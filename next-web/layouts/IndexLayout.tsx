@@ -2,8 +2,6 @@ import Head from "next/head";
 import { styled } from "../stitches.config";
 import { LayoutProps } from "../types";
 
-const Box = styled("div", {});
-
 const Container = styled("div", {
   fontSize: "$4",
   color: "$loContrast",
@@ -22,7 +20,7 @@ const Container = styled("div", {
 });
 
 const Layout: React.FC<LayoutProps> = ({ children, description }) => (
-  <Box>
+  <>
     <Head>
       <title>Hacker Sundae</title>
       <meta name="description" content={description} />
@@ -42,7 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children, description }) => (
       />
     </Head>
     <Container size={{ "@initial": "2" }}>{children}</Container>
-  </Box>
+  </>
 );
 
 export default Layout;

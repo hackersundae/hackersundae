@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { globalCss, styled } from "../stitches.config";
 
+import logo from "../public/logo.png";
 import Layout from "../layouts/IndexLayout";
 import Title from "../components/TitleSection";
 import Body from "../components/BodySection";
@@ -23,14 +24,6 @@ const Wrapper = styled("div", {
   padding: "3rem 1rem",
 });
 
-const LogoWrapper = styled("div", {
-  position: "relative",
-  height: "70px",
-  width: "35px",
-  margin: "0 0 $1 0",
-  zIndex: "-1",
-});
-
 const Page: React.FC<HomeProps> = () => {
   useEffect(() => {
     globalStyles();
@@ -39,9 +32,7 @@ const Page: React.FC<HomeProps> = () => {
   return (
     <Layout description="A collective of hackers who host a weekly hack-a-thon on Sundays">
       <Wrapper>
-        <LogoWrapper>
-          <Image layout="fill" src="/logo.png" alt="Hacker Sundae logo" />
-        </LogoWrapper>
+        <Image src={logo} width={35} alt="Hacker Sundae logo" priority />
         <Title
           title="Welcome to, Hacker Sundae"
           subtitle="Remote hackathon every Sunday"
