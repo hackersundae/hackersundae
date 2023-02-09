@@ -2,7 +2,7 @@
 
 This serves as the code monolith for our group. Use it for all your dev needs. Lets build, break and learn the things.
 
-## Directorie Structure
+## Directory Structure
 
 ```text
 hackersundae
